@@ -1,0 +1,1225 @@
+<!-- Poetry Portfolio - Home (Visuals) -->
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Kalam aur Ehsaas - Premium Poetry Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Hanken+Grotesk:wght@100..900&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" rel="stylesheet">
+<style>
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #fcf9f2;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #dcdad3;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #C5A059;
+        }
+
+        /* Line clamping for poetry preview */
+        .line-clamp-4 {
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        @keyframes image-reveal {
+            0% { opacity: 0; transform: translateY(10px) scale(1.02); }
+            100% { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        .animate-image-reveal {
+            animation: image-reveal 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        }
+    </style>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "ink-deep": "#1A1918",
+                "error": "#ba1a1a",
+                "on-error-container": "#93000a",
+                "surface-dim": "#dcdad3",
+                "background": "#fcf9f2",
+                "surface-container-low": "#f6f3ec",
+                "on-primary": "#ffffff",
+                "surface-container-lowest": "#ffffff",
+                "on-background": "#1c1c18",
+                "surface-container-high": "#ebe8e1",
+                "on-secondary-fixed": "#1e1b17",
+                "surface-tint": "#605e5c",
+                "surface-bright": "#fcf9f2",
+                "on-primary-fixed-variant": "#484645",
+                "on-surface-variant": "#4a4640",
+                "surface-border": "#E8E2D5",
+                "on-primary-container": "#868382",
+                "surface-container-highest": "#e5e2db",
+                "outline": "#7b766f",
+                "on-secondary-fixed-variant": "#4a4642",
+                "primary-fixed-dim": "#cac6c4",
+                "on-surface": "#1c1c18",
+                "surface-container": "#f0eee7",
+                "surface": "#F5F0E6",
+                "inverse-on-surface": "#f3f0ea",
+                "tertiary-fixed-dim": "#e9c176",
+                "antique-gold": "#C5A059",
+                "tertiary-container": "#261900",
+                "on-tertiary": "#ffffff",
+                "primary-fixed": "#e6e2df",
+                "error-container": "#ffdad6",
+                "outline-variant": "#ccc5bd",
+                "on-tertiary-fixed-variant": "#5d4201",
+                "primary-container": "#1c1b1a",
+                "on-secondary-container": "#67625d",
+                "inverse-surface": "#31312c",
+                "on-error": "#ffffff",
+                "tertiary": "#000000",
+                "on-tertiary-fixed": "#261900",
+                "secondary": "#625e59",
+                "on-tertiary-container": "#a17f3b",
+                "secondary-fixed-dim": "#ccc5bf",
+                "on-primary-fixed": "#1c1b1a",
+                "tertiary-fixed": "#ffdea5",
+                "inverse-primary": "#cac6c4",
+                "secondary-fixed": "#e9e1db",
+                "secondary-container": "#e6ded8",
+                "surface-variant": "#e5e2db",
+                "on-secondary": "#ffffff",
+                "primary": "#000000",
+                "dusty-rose": "#bd8e82",
+                "warm-cream": "#fdf9f4",
+                "pale-blush": "#faf0eb",
+                "soft-beige": "#f5eedc",
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "margin-mobile": "24px",
+                "container-max": "1140px",
+                "section-gap": "128px",
+                "element-gap": "16px",
+                "stanza-gap": "48px",
+                "gutter": "32px"
+        },
+        "fontFamily": {
+                "poetry-hindi": [
+                        "\"Source Serif 4\""
+                ],
+                "display-lg": [
+                        "Playfair Display"
+                ],
+                "headline-md": [
+                        "Playfair Display"
+                ],
+                "label-sm": [
+                        "Hanken Grotesk"
+                ],
+                "nav-link": [
+                        "Hanken Grotesk"
+                ],
+                "display-lg-mobile": [
+                        "Playfair Display"
+                ],
+                "poetry-body": [
+                        "\"Source Serif 4\""
+                ],
+                "metadata": [
+                        "Hanken Grotesk"
+                ]
+        },
+        "fontSize": {
+                "poetry-hindi": [
+                        "22px",
+                        {
+                                "lineHeight": "38px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "display-lg": [
+                        "64px",
+                        {
+                                "lineHeight": "72px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-md": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "label-sm": [
+                        "11px",
+                        {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.1em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "nav-link": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "letterSpacing": "0.08em",
+                                "fontWeight": "500"
+                        }
+                ],
+                "display-lg-mobile": [
+                        "40px",
+                        {
+                                "lineHeight": "48px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "poetry-body": [
+                        "20px",
+                        {
+                                "lineHeight": "36px",
+                                "letterSpacing": "0.01em",
+                                "fontWeight": "400"
+                        }
+                ],
+                "metadata": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-warm-cream text-ink-deep font-poetry-body relative min-h-screen flex flex-col selection:bg-dusty-rose/20 selection:text-ink-deep" data-mode="connect">
+<!-- Main Content Wrapper -->
+<div class="relative z-10 flex flex-col min-h-screen">
+<!-- TopAppBar Shared Component -->
+<header class="bg-warm-cream/90 backdrop-blur-md fixed top-0 w-full z-50 border-b border-surface-border transition-transform duration-300 transform translate-y-0" id="main-nav">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter flex justify-between items-center h-20">
+<!-- Leading Icon (Menu) -->
+<button aria-label="Menu" class="text-ink-deep cursor-pointer active:scale-95 transition-transform hover:opacity-80 transition-all duration-200 p-2 -ml-2 group">
+<span class="material-symbols-outlined text-[24px] font-light">menu_book</span>
+</button>
+<!-- Brand Logo / Headline -->
+<h1 class="font-headline-md text-headline-md text-ink-deep tracking-tighter cursor-pointer hover:opacity-80 transition-opacity"><a href="#" class="block"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlJ7RNuiJcQchrVUj0oVYjR91ItckaP_k-Z_2w3gRvn2x1KTfoiWWwxr6bFA0TZ_7I6az9yp84-2iTMWY7TMkGO57KpnhF42kHpHdUofi88ZAHEGxC6a4CnJLcixElK7NUB_UidT1j2fZZcmV6k42EP8m9SpL4wYe9aNrVWkxjK5YfpAlc2Z7Xoz30CJN764oerO_mDSgwqIS6VwVvgnjz6a3wNPDIQ0xBVsgD7lJcbPTvlU4HrlosmKUva7sFYR-Tdw" alt="कलम और एहसास" class="h-12 md:h-16 w-auto object-contain rounded-full"></a></h1>
+<!-- Trailing Icon (Search) -->
+<button aria-label="Search" class="text-ink-deep cursor-pointer active:scale-95 transition-transform hover:opacity-80 transition-all duration-200 p-2 -mr-2 group">
+<span class="material-symbols-outlined text-[24px] font-light">search</span>
+</button>
+</div>
+<!-- Hidden Desktop Navigation (Semantic mapping handled here since it's the TopAppBar context) -->
+<nav class="hidden md:flex justify-center bg-surface-container-low/50 backdrop-blur-sm border-t border-surface-border">
+<ul class="flex max-w-container-max mx-auto px-gutter gap-8 h-12 items-center">
+<li class=""><a class="font-nav-link text-nav-link text-dusty-rose border-b-2 border-dusty-rose pb-1 inline-block" href="#">मुखपृष्ठ</a></li>
+<li class=""><a class="font-nav-link text-nav-link text-secondary hover:text-dusty-rose transition-colors duration-300 pb-1 border-b-2 border-transparent inline-block" href="#">शायरियां</a></li>
+<li class=""><a class="font-nav-link text-nav-link text-secondary hover:text-dusty-rose transition-colors duration-300 pb-1 border-b-2 border-transparent inline-block" href="#">लेखक परिचय</a></li>
+<li class=""><a class="font-nav-link text-nav-link text-secondary hover:text-dusty-rose transition-colors duration-300 pb-1 border-b-2 border-transparent inline-block" href="#">संग्रह</a></li>
+<li class=""><a class="font-nav-link text-nav-link text-secondary hover:text-dusty-rose transition-colors duration-300 pb-1 border-b-2 border-transparent inline-block" href="#">संपर्क</a></li>
+</ul>
+</nav>
+</header>
+<!-- Main Content Area -->
+<main class="flex-grow pt-32 pb-section-gap">
+<!-- Hero Section -->
+<section class="min-h-[751px] flex flex-col justify-center max-w-container-max mx-auto px-margin-mobile md:px-gutter relative pt-12 pb-24">
+<div class="max-w-3xl flex flex-col gap-8 relative z-10">
+<span class="font-metadata text-metadata text-dusty-rose tracking-[0.2em] uppercase">WORDS FROM THE HEART</span>
+<h2 class="font-display-lg-mobile md:font-display-lg text-ink-deep text-display-lg-mobile md:text-display-lg max-w-4xl leading-tight">
+                        Some feelings are better written than spoken.
+                    </h2>
+<div class="mt-6 border-l-2 border-dusty-rose/30 pl-6 py-2 hover:border-dusty-rose/50 transition-colors duration-500">
+<p class="font-poetry-hindi text-poetry-hindi text-ink-deep max-w-2xl italic leading-relaxed">
+                            "कुछ अल्फ़ाज़ अधूरे रह गए, <br>कुछ एहसास लिखे नहीं गए।"
+                        </p>
+</div>
+<div class="mt-8 flex items-center gap-6">
+<a class="group flex items-center gap-2 font-nav-link text-nav-link text-dusty-rose hover:text-ink-deep transition-colors duration-300 border border-dusty-rose hover:border-ink-deep px-6 py-4 rounded-sm bg-surface-container-lowest" href="#collection">
+<span class="">Read my shayaris</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform duration-300">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-12 left-margin-mobile md:left-gutter flex flex-col items-center gap-4 opacity-60 hover:opacity-100 transition-opacity duration-300">
+<span class="font-metadata text-metadata text-dusty-rose writing-vertical-rl rotate-180 tracking-widest uppercase"><br></span>
+<div class="w-[1px] h-12 bg-gradient-to-b from-dusty-rose to-transparent animate-pulse"></div>
+</div>
+</section>
+<!-- Featured Shayari Section -->
+<section class="py-section-gap relative flex justify-center items-center overflow-hidden group">
+<div class="absolute inset-0 z-0 overflow-hidden animate-image-reveal">
+<img alt="Morning light over books" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9pZJfnd928Hy58AJ43uNIt_KrgAhfZy6tNJNSfLr0ug0yXFioIeeJI1tPd0OUbH773Jq8_KITwzZJ4ifUnElZaO2H22oZiDKYQh1ePo5gwL9rEZMyiJbavbE3G7jbSuD35g7taD6y8GmVsQiRPWTYHCwXqLk91TRoT4SEUlCQoIWVaAS2deAhp-8IvOh-_TJnfp4hdQFdW6bg0wM0oX8P2hahLrridtUIYpdhcc2VoLUfzgNyzl6Q">
+<div class="absolute inset-0 bg-warm-cream/85 backdrop-blur-[2px]"></div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter relative z-10 text-center flex flex-col items-center gap-10">
+<span class="material-symbols-outlined text-[32px] text-antique-gold/60 mb-4">format_quote</span>
+<blockquote class="font-poetry-hindi text-[28px] md:text-[36px] leading-[48px] text-ink-deep max-w-4xl mx-auto italic tracking-wide text-balance">
+                        "कभी कभी ख़ामोशी भी,<br>बहुत कुछ कह जाती है…"
+                    </blockquote>
+<div class="flex items-center gap-4 mt-6">
+<div class="h-[1px] w-12 bg-antique-gold/40"></div>
+<cite class="font-metadata text-metadata text-secondary uppercase tracking-widest not-italic">कलम और एहसास</cite>
+<div class="h-[1px] w-12 bg-antique-gold/40"></div>
+</div>
+</div>
+</section>
+<!-- Shayari Collection (Preview) - Glassmorphism / Book Page Layout -->
+<section class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-gutter" id="collection">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="flex flex-col gap-3">
+<h2 class="font-headline-md text-headline-md text-ink-deep">मेरी शायरियाँ</h2>
+<p class="font-poetry-hindi text-poetry-hindi text-ink-deep">कुछ अल्फ़ाज़, जो काग़ज़ से पहले दिल पर लिखे गए।</p>
+</div>
+<a class="font-nav-link text-nav-link text-dusty-rose hover:text-ink-deep group flex items-center gap-2 border-b border-dusty-rose/40 pb-1 transition-colors" href="#">
+                        View All Collections <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">east</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Poetry Card 1 -->
+<article class="border border-surface-border hover:border-dusty-rose/40 hover:shadow-sm p-10 flex flex-col h-full group transition-all duration-500 hover:-translate-y-2 relative overflow-hidden">
+<div class="absolute inset-0 z-0 overflow-hidden animate-image-reveal">
+<img alt="Moonlight" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTiIiZZAjo99f5rNjvDv1-ezEJJNKvq2Vyma-D1DXHcTivMtBSNqeaRhKaiGRIbsOsK21w5jJWtO9QjDj1qxM7H4z28TA-7VotqH5xQrW7Mh3LNzFWM56VwJXuEdVau9ADpgKkB-zd81DFXsKMvrAeXfgKTTeQbOydyEXasB_TNnI505pOpSD3kaVdLTkdbc5z7Bkejgm06cTrTaG5-bOt7K7slsCIujpmOPXmOzx6kl00j1dIBcRY">
+<div class="absolute inset-0 bg-gradient-to-b from-warm-cream/80 via-warm-cream/90 to-warm-cream"></div>
+</div>
+<div class="relative z-10 flex flex-col h-full w-full">
+<div class="flex justify-between items-start mb-8">
+<span class="font-metadata text-metadata text-dusty-rose uppercase tracking-widest">Love</span>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-dusty-rose transition-colors text-[20px]">auto_stories</span>
+</div>
+<h3 class="font-headline-md text-ink-deep text-[24px] mb-4">अधूरी दास्तान</h3>
+<div class="w-8 h-[1px] bg-antique-gold/40 mb-6 group-hover:w-16 transition-all duration-500"></div>
+<p class="font-poetry-hindi text-poetry-hindi text-ink-deep flex-grow line-clamp-4 leading-[1.8]">
+                            तुमसे मिलकर भी, तुमसे दूर रहे,<br>
+                            पास होकर भी, मजबूर रहे।<br>
+                            ये कैसी कशमकश है दिल की,<br>
+                            हम तेरे होकर भी, तेरे ना रहे।
+                        </p>
+<a class="mt-8 font-nav-link text-nav-link text-dusty-rose group/btn flex items-center gap-2 w-fit" href="#">
+<span class="">Open</span>
+<div class="h-[1px] w-4 bg-dusty-rose group-hover/btn:w-8 transition-all duration-300"></div>
+</a>
+</div>
+</article>
+<!-- Poetry Card 2 -->
+<article class="border border-surface-border hover:border-dusty-rose/40 hover:shadow-sm p-10 flex flex-col h-full group transition-all duration-500 hover:-translate-y-2 relative overflow-hidden">
+<div class="absolute inset-0 z-0 overflow-hidden animate-image-reveal" style="animation-delay: 0.1s;">
+<img alt="Open road at dusk" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAC9CUKe9QapCFGklWr03-mQBLLd1_Lv2XbXRL0-_v0BkyZxW9VpsFRthRMDBVJDV8dTkj3vp8_Mwgrrj66YTiTrfYG7DwrED_Cf_fSx7PS3xzGbI6u1Mt6qnI0R81lfwIJ8ozwwAB6a4JCuF3xdqe2sP8d4VJYJzqvddzqEh3hH1gUO-01SLVuoSy1oRID9JfWifpeqnP7AhSbr6EWl6MfX5o8r84aph7Qh5Ml6XQY7uOL10R2Y0IO">
+<div class="absolute inset-0 bg-gradient-to-b from-pale-blush/80 via-pale-blush/90 to-pale-blush"></div>
+</div>
+<div class="relative z-10 flex flex-col h-full w-full">
+<div class="flex justify-between items-start mb-8">
+<span class="font-metadata text-metadata text-dusty-rose uppercase tracking-widest">Life</span>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-dusty-rose transition-colors text-[20px]">history_edu</span>
+</div>
+<h3 class="font-headline-md text-ink-deep text-[24px] mb-4">वक़्त की रेत</h3>
+<div class="w-8 h-[1px] bg-antique-gold/40 mb-6 group-hover:w-16 transition-all duration-500"></div>
+<p class="font-poetry-hindi text-poetry-hindi text-ink-deep flex-grow line-clamp-4 leading-[1.8]">
+                            मुट्ठी से फिसलती रेत सा है ये वक़्त,<br>
+                            जितना पकड़ो, उतना ही छूटता है।<br>
+                            जिंदगी के इस सफर में,<br>
+                            हर कोई एक दिन रूठता है।
+                        </p>
+<a class="mt-8 font-nav-link text-nav-link text-dusty-rose group/btn flex items-center gap-2 w-fit" href="#">
+<span class="">Open</span>
+<div class="h-[1px] w-4 bg-dusty-rose group-hover/btn:w-8 transition-all duration-300"></div>
+</a>
+</div>
+</article>
+<!-- Poetry Card 3 -->
+<article class="border border-surface-border hover:border-dusty-rose/40 hover:shadow-sm p-10 flex flex-col h-full group transition-all duration-500 hover:-translate-y-2 relative overflow-hidden">
+<div class="absolute inset-0 z-0 overflow-hidden animate-image-reveal" style="animation-delay: 0.2s;">
+<img alt="Dried flower" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8HgrIczFtZC6f2zlr3d5q47v5RCtmvL9OYARTV1NT1sOwZh6nmFzlhH1b-ZUw3SfBr8ozyXPfa7Re7lwfr6D9lltGnRpyobcNR9dtNPosinKpqe_SpoddXvwcvVAq7oovEB4RpFddOpogBmC6XR0bZxI-kt8dZU5Vk0i_wCZrpOS2f_4pMHSVOeTIzSSDFCEaESbGqlYS5I59hN0p-2AMR4DZSMiRTpRhDQmmheCPzVw9cmm8ycKj">
+<div class="absolute inset-0 bg-gradient-to-b from-soft-beige/80 via-soft-beige/90 to-soft-beige"></div>
+</div>
+<div class="relative z-10 flex flex-col h-full w-full">
+<div class="flex justify-between items-start mb-8">
+<span class="font-metadata text-metadata text-dusty-rose uppercase tracking-widest">Memories</span>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-dusty-rose transition-colors text-[20px]">photo_library</span>
+</div>
+<h3 class="font-headline-md text-ink-deep text-[24px] mb-4">पुरानी यादें</h3>
+<div class="w-8 h-[1px] bg-antique-gold/40 mb-6 group-hover:w-16 transition-all duration-500"></div>
+<p class="font-poetry-hindi text-poetry-hindi text-ink-deep flex-grow line-clamp-4 leading-[1.8]">
+                            किताबों के पन्नों में दबी वो तस्वीर,<br>
+                            आज भी कई सवाल पूछती है।<br>
+                            ख़ामोश लबों से क्या कह गई वो,<br>
+                            आज भी ये दिल सोचता है।
+                        </p>
+<a class="mt-8 font-nav-link text-nav-link text-dusty-rose group/btn flex items-center gap-2 w-fit" href="#">
+<span class="">Open</span>
+<div class="h-[1px] w-4 bg-dusty-rose group-hover/btn:w-8 transition-all duration-300"></div>
+</a>
+</div>
+</article>
+</div>
+</section>
+<!-- Writing Philosophy Section (Bento/Asymmetric style) -->
+<section class="py-section-gap relative bg-surface-container-low/50 border-y border-surface-border">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- Left Text Area -->
+<div class="lg:col-span-5 flex flex-col gap-6 lg:pr-12">
+<h2 class="font-metadata text-metadata text-dusty-rose uppercase tracking-[0.2em]">मैं क्यों लिखता हूँ</h2>
+<div class="w-12 h-[1px] bg-antique-gold/40"></div>
+<p class="font-poetry-body text-poetry-body text-ink-deep leading-relaxed mt-4">
+                                Writing is not just an expression; it's a silent conversation with the soul. The ink flows where tears refuse to fall. In the quiet hours of the morning, when the world wakes, the pen readies to capture the whispers of the heart.
+                            </p>
+</div>
+<!-- Right Quote Display (Large Canvas) -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-12 md:p-20 relative overflow-hidden border border-surface-border rounded-sm shadow-sm">
+<span class="material-symbols-outlined text-[120px] text-surface-container/80 absolute top-4 left-4 pointer-events-none select-none z-0">format_quote</span>
+<div class="relative z-10 pl-8 md:pl-12 border-l-4 border-dusty-rose/40">
+<p class="font-poetry-hindi text-[32px] md:text-[40px] leading-[1.4] text-ink-deep">
+                                    "कुछ बातें कही नहीं जातीं,<br>बस लिखी जाती हैं।"
+                                </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section Preview -->
+<section class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<!-- Placeholder for Intimate Portrait -->
+<div class="relative aspect-[3/4] w-full max-w-md mx-auto group">
+<div class="absolute inset-0 bg-surface-container-low border border-surface-border group-hover:border-dusty-rose/40 transition-colors duration-700"></div>
+<img class="w-full h-full object-cover relative z-10 hover:opacity-90 transition-all duration-700 grayscale hover:grayscale-0" data-alt="A bright, airy, cinematic black and white portrait of a solitary figure writing in a sunlit, light wood library or study. Soft, natural window light illuminates the subject's hands and a fresh notebook. Delicate shadows, clean textures, calm and contemplative. Soft morning glow." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaFKnSLeOdYdar7e1VU2H3LlIf_yAfOuvGbNytGaVTBDQCFrp94QRDhubKkZep5vDgxQJczNGoKUN46l1N22yyzwS0gZQJ2a7MxjeYnmrlPgoSkvLraF-C6FAmep_7-tEPC4wxgtiHL1nYo5U44arkRR0B3HcaLMyMWVpEideDxIVqM2-kq67SK9I6QDeC2pECUiJroJ8qAldyxDq89Dg12Qb_VoJjnisMl5M0JggykQtaZDO0ZnLQ">
+<!-- Decorative frame elements -->
+<div class="absolute -top-4 -left-4 w-16 h-16 border-t border-l border-antique-gold/60 z-20 transition-all group-hover:-top-2 group-hover:-left-2"></div>
+<div class="absolute -bottom-4 -right-4 w-16 h-16 border-b border-r border-antique-gold/60 z-20 transition-all group-hover:-bottom-2 group-hover:-right-2"></div>
+</div>
+<div class="flex flex-col gap-6">
+<h2 class="font-headline-md text-headline-md text-ink-deep">एक लेखक के बारे में...</h2>
+<h3 class="font-metadata text-metadata text-dusty-rose tracking-[0.1em] uppercase">The Journey of the Pen</h3>
+<p class="font-poetry-body text-poetry-body text-ink-deep mt-4 mb-6">
+                            Beyond the verses lies a soul observing the quiet moments of existence. A collector of silences, a narrator of unsaid emotions. This space is dedicated to the profound simplicity of feelings that often go unnoticed in the noise of daily life.
+                        </p>
+<a class="font-nav-link text-nav-link text-dusty-rose border-b border-dusty-rose w-fit pb-1 hover:text-ink-deep hover:border-ink-deep transition-colors" href="#">Read full biography</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shared Component -->
+<footer class="bg-surface-container-low w-full py-section-gap border-t border-surface-border">
+<div class="max-w-container-max mx-auto px-margin-mobile flex flex-col md:flex-row justify-between items-center gap-element-gap">
+<!-- Copyright text -->
+<p class="font-metadata text-metadata text-secondary opacity-80 hover:opacity-100 transition-opacity"><div class="flex items-center gap-3"><span class="">© 2024</span><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkDhdDCXNThOllH-Xcshr5A_iS92YtlB6uWwSrZFuL7XireAnWEakdKAQSGAKRW7TRse8rElrN0tZP5GDGIoUkYORx4_liXnDv_-5gIWCDKm3i657EkFOGJAbJrkdvxulMLYKjY3RjWSB8EzHHPh8F89eLpdATjUS9KYarH3uLTM6wVdN2Ys3FESFjxw09mt9DBPYJsAQUWAsMxFsAhV4JaVlgyME7E-e0zyJpgnXY08Ej0IPLcZ4O-6HFYiIAduJz6g" alt="शब्दांश" class="h-12 w-12 object-contain rounded-full"><span class="">• आपकी रूह तक पहुँचने की कोशिश</span></div></p>
+<!-- Links -->
+<ul class="flex flex-wrap justify-center gap-6">
+<li class=""><a class="font-metadata text-metadata text-secondary hover:text-ink-deep transition-colors" href="#">निजता नीति</a></li>
+<li class=""><a class="font-metadata text-metadata text-secondary hover:text-ink-deep transition-colors" href="#">नियम और शर्तें</a></li>
+<li class=""><a class="font-metadata text-metadata text-secondary hover:text-ink-deep transition-colors" href="#">संपर्क करें</a></li>
+</ul>
+</div>
+</footer>
+</div>
+<!-- Navigation Drawer Shared Component -->
+<div class="fixed inset-0 z-[60] bg-ink-deep/20 backdrop-blur-sm pointer-events-none opacity-0 transition-opacity duration-300" id="nav-drawer">
+<nav class="h-full w-80 fixed left-0 top-0 z-[60] bg-surface-container-lowest shadow-2xl flex flex-col gap-2 pt-12 transform -translate-x-full transition-all duration-300 ease-in-out pointer-events-auto border-r border-surface-border">
+<div class="px-6 mb-8">
+<h2 class="font-headline-md text-headline-md text-ink-deep">कलम की यात्रा</h2>
+</div>
+<ul class="flex flex-col gap-1 w-full">
+<li class="">
+<a class="flex items-center gap-4 bg-surface-container text-dusty-rose rounded-r-full font-bold px-6 py-4 mr-4 hover:bg-surface-container-high transition-all font-nav-link text-nav-link" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="">मुखपृष्ठ</span>
+</a>
+</li>
+<li class="">
+<a class="flex items-center gap-4 text-ink-deep hover:text-dusty-rose px-6 py-4 hover:bg-surface-container transition-all font-nav-link text-nav-link mr-4 rounded-r-full" href="#">
+<span class="material-symbols-outlined">auto_stories</span>
+<span class="">शायरियाँ</span>
+</a>
+</li>
+<li class="">
+<a class="flex items-center gap-4 text-ink-deep hover:text-dusty-rose px-6 py-4 hover:bg-surface-container transition-all font-nav-link text-nav-link mr-4 rounded-r-full" href="#">
+<span class="material-symbols-outlined">person_pin</span>
+<span class="">लेखक परिचय</span>
+</a>
+</li>
+<li class="">
+<a class="flex items-center gap-4 text-ink-deep hover:text-dusty-rose px-6 py-4 hover:bg-surface-container transition-all font-nav-link text-nav-link mr-4 rounded-r-full" href="#">
+<span class="material-symbols-outlined">library_books</span>
+<span class="">संग्रह</span>
+</a>
+</li>
+<li class="">
+<a class="flex items-center gap-4 text-ink-deep hover:text-dusty-rose px-6 py-4 hover:bg-surface-container transition-all font-nav-link text-nav-link mr-4 rounded-r-full" href="#">
+<span class="material-symbols-outlined">mail</span>
+<span class="">संपर्क</span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+<script>
+        let lastScroll = 0;
+        const nav = document.getElementById('main-nav');
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll <= 0) {
+                nav.classList.remove('-translate-y-full');
+                return;
+            }
+            
+            if (currentScroll > lastScroll && currentScroll > 100) {
+                // Scroll down - hide nav
+                nav.classList.add('-translate-y-full');
+            } else if (currentScroll < lastScroll) {
+                // Scroll up - show nav
+                nav.classList.remove('-translate-y-full');
+            }
+            
+            lastScroll = currentScroll;
+        });
+    </script>
+
+
+</body></html>
+
+<!-- Poetry Archive (Visuals) -->
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Archive / संग्रह - कलम और एहसास</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&amp;family=Lora:ital,wght@0,400..700;1,400..700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "inverse-surface": "#34302f",
+                "surface-container": "#f1ede8",
+                "tertiary-fixed": "#ffdf8e",
+                "on-secondary-fixed-variant": "#5a413d",
+                "secondary-container": "#ffdad3",
+                "secondary-fixed-dim": "#e8b8b0",
+                "inverse-primary": "#f8b7a7",
+                "secondary-fixed": "#ffd9d2",
+                "surface-container-low": "#f7f3ee",
+                "on-secondary-fixed": "#2d1613",
+                "primary": "#8d4a3c",
+                "surface-dim": "#ddd9d5",
+                "primary-fixed-dim": "#f8b7a7",
+                "on-primary": "#ffffff",
+                "on-secondary-container": "#402a27",
+                "on-surface-variant": "#514341",
+                "on-tertiary-fixed-variant": "#554500",
+                "on-secondary": "#ffffff",
+                "surface": "#fdf9f4",
+                "inverse-on-surface": "#f8f0ec",
+                "on-surface": "#1e1b1a",
+                "error-container": "#ffdad6",
+                "surface-container-lowest": "#ffffff",
+                "on-tertiary-fixed": "#241a00",
+                "on-error-container": "#410002",
+                "tertiary-fixed-dim": "#e0c36b",
+                "surface-container-high": "#ebe7e2",
+                "surface-bright": "#fdf9f4",
+                "error": "#ba1a1a",
+                "on-primary-fixed-variant": "#713426",
+                "primary-fixed": "#ffdad3",
+                "on-error": "#ffffff",
+                "surface-container-highest": "#e5e2dd",
+                "on-primary-container": "#3a0a02",
+                "outline": "#847370",
+                "tertiary-container": "#554500",
+                "secondary": "#755955",
+                "on-primary-fixed": "#3a0a02",
+                "on-tertiary-container": "#fce085",
+                "primary-container": "#ffdad3",
+                "tertiary": "#705d00",
+                "surface-variant": "#f4dfdb",
+                "outline-variant": "#d6c2be",
+                "on-tertiary": "#ffffff"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "container-max": "1200px",
+                "margin-mobile": "24px",
+                "element-gap": "24px",
+                "section-gap": "120px",
+                "gutter": "40px",
+                "stanza-gap": "56px"
+        },
+        "fontFamily": {
+                "display-lg": [
+                        "Playfair Display"
+                ],
+                "nav-link": [
+                        "Cormorant Garamond"
+                ],
+                "poetry-body": [
+                        "Lora"
+                ],
+                "display-lg-mobile": [
+                        "Playfair Display"
+                ],
+                "metadata": [
+                        "Cormorant Garamond"
+                ],
+                "label-sm": [
+                        "Cormorant Garamond"
+                ],
+                "poetry-hindi": [
+                        "Lora"
+                ],
+                "headline-md": [
+                        "Playfair Display"
+                ]
+        },
+        "fontSize": {
+                "display-lg": [
+                        "56px",
+                        {
+                                "lineHeight": "64px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "nav-link": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "500",
+                                "letterSpacing": "0.05em"
+                        }
+                ],
+                "poetry-body": [
+                        "18px",
+                        {
+                                "lineHeight": "36px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "display-lg-mobile": [
+                        "40px",
+                        {
+                                "lineHeight": "48px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "metadata": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "fontWeight": "400",
+                                "letterSpacing": "0.02em"
+                        }
+                ],
+                "label-sm": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "fontWeight": "600",
+                                "letterSpacing": "0.05em"
+                        }
+                ],
+                "poetry-hindi": [
+                        "20px",
+                        {
+                                "lineHeight": "40px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-md": [
+                        "28px",
+                        {
+                                "lineHeight": "36px",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        .poetry-divider {
+            border-top: 1px solid theme('colors.primary'); /* Dusty Rose */
+            width: 48px;
+            margin: 32px auto;
+        }
+
+        .poetry-card {
+            position: relative;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            background-color: theme('colors.surface-container-lowest');
+        }
+
+        .poetry-card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%) scaleY(0);
+            width: 3px;
+            height: 50%;
+            background-color: theme('colors.primary');
+            transition: transform 0.4s ease;
+            opacity: 0;
+            z-index: 20;
+        }
+
+        .poetry-card:hover::before {
+            transform: translateY(-50%) scaleY(1);
+            opacity: 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-poetry-body min-h-screen flex flex-col relative overflow-x-hidden selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-surface-variant">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter flex justify-between items-center h-20">
+<!-- Leading Icon -->
+<button class="text-on-surface hover:text-primary transition-all duration-200 cursor-pointer active:scale-95 transition-transform flex items-center justify-center w-12 h-12 rounded-full hover:bg-surface-variant/50 group">
+<span class="material-symbols-outlined text-2xl group-hover:scale-110 transition-transform text-tertiary" data-icon="menu_book">menu_book</span>
+</button>
+<!-- Brand Logo -->
+<div class="absolute left-1/2 -translate-x-1/2 h-12 w-auto flex items-center justify-center pointer-events-none"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuJ9AsYUNjm9QJCZn92MFw-zs1tq-9YqJTtPl9VnmlXGMUEqBvj3-fpbjd9whmQPPzcOfd054mH-xnYuXDWR87UguFjKrt6dgKWGcgPLTZ2qrSEAoD5FWafrgVX9uQZBaMLPEdMdhjsfDn91-BIa4yAowACyjN5dLZRnV0qJppyHhamAHjLI38pGTMu4JSGuCH4pjAApL5M0rlQsalDQzmY8om69ehzXEAnUvI6so792ovIa-3WvR7stdT04ANQFUwng" alt="कलम और एहसास" class="h-full w-auto object-contain"></div>
+<!-- Trailing Icon -->
+<button class="text-on-surface hover:text-primary transition-all duration-200 cursor-pointer active:scale-95 transition-transform flex items-center justify-center w-12 h-12 rounded-full hover:bg-surface-variant/50 group z-10">
+<span class="material-symbols-outlined text-2xl group-hover:scale-110 transition-transform text-tertiary" data-icon="search">search</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-32 pb-section-gap relative z-10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<!-- Archive Header -->
+<section class="mb-20 text-center">
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-4 mt-8">Archive <span class="opacity-50 mx-2 text-primary">/</span> संग्रह</h2>
+<div class="poetry-divider mb-8"></div>
+<p class="font-metadata text-metadata text-on-surface-variant tracking-widest uppercase">A digital sanctuary for the written word</p>
+</section>
+<!-- Search & Filter Bar -->
+<section class="mb-section-gap max-w-2xl mx-auto">
+<div class="relative mb-8 group">
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary text-on-surface focus:ring-0 px-0 py-4 font-poetry-body text-poetry-body placeholder:text-on-surface-variant/50 transition-colors duration-300" placeholder="Search a feeling, word or shayari..." type="text">
+<span class="material-symbols-outlined absolute right-0 top-1/2 -translate-y-1/2 text-tertiary group-focus-within:text-primary transition-colors">search</span>
+</div>
+<div class="flex flex-wrap justify-center gap-4">
+<button class="px-6 py-2 rounded-full border border-primary text-on-primary font-nav-link text-nav-link bg-primary hover:bg-primary-fixed-variant transition-colors shadow-sm">All</button>
+<button class="px-6 py-2 rounded-full border border-outline-variant text-on-surface hover:text-primary hover:border-primary hover:bg-secondary-container font-nav-link text-nav-link transition-colors bg-surface-container-lowest shadow-sm">Love</button>
+<button class="px-6 py-2 rounded-full border border-outline-variant text-on-surface hover:text-primary hover:border-primary hover:bg-secondary-container font-nav-link text-nav-link transition-colors bg-surface-container-lowest shadow-sm">Life</button>
+<button class="px-6 py-2 rounded-full border border-outline-variant text-on-surface hover:text-primary hover:border-primary hover:bg-secondary-container font-nav-link text-nav-link transition-colors bg-surface-container-lowest shadow-sm">Memories</button>
+<button class="px-6 py-2 rounded-full border border-outline-variant text-on-surface hover:text-primary hover:border-primary hover:bg-secondary-container font-nav-link text-nav-link transition-colors bg-surface-container-lowest shadow-sm">Sad</button>
+<button class="px-6 py-2 rounded-full border border-outline-variant text-on-surface hover:text-primary hover:border-primary hover:bg-secondary-container font-nav-link text-nav-link transition-colors bg-surface-container-lowest shadow-sm">Hope</button>
+<button class="px-6 py-2 rounded-full border border-outline-variant text-on-surface hover:text-primary hover:border-primary hover:bg-secondary-container font-nav-link text-nav-link transition-colors bg-surface-container-lowest shadow-sm">Unspoken</button>
+</div>
+</section>
+<!-- Shayari Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-gutter">
+<!-- Card 1 -->
+<article class="poetry-card relative overflow-hidden group p-12 border border-surface-variant flex flex-col items-center text-center cursor-pointer hover:-translate-y-1 transition-transform duration-300">
+<div class="absolute inset-0 z-0">
+<img alt="Moonlight" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTiIiZZAjo99f5rNjvDv1-ezEJJNKvq2Vyma-D1DXHcTivMtBSNqeaRhKaiGRIbsOsK21w5jJWtO9QjDj1qxM7H4z28TA-7VotqH5xQrW7Mh3LNzFWM56VwJXuEdVau9ADpgKkB-zd81DFXsKMvrAeXfgKTTeQbOydyEXasB_TNnI505pOpSD3kaVdLTkdbc5z7Bkejgm06cTrTaG5-bOt7K7slsCIujpmOPXmOzx6kl00j1dIBcRY">
+<div class="absolute inset-0 bg-surface-container-lowest/85 group-hover:bg-surface-container-lowest/75 transition-colors duration-500"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-black/10 to-surface-container-lowest/90"></div>
+</div>
+<div class="relative z-10 flex flex-col items-center h-full w-full">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-6">Love</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-6">खामोश लफ्ज़</h3>
+<div class="w-12 h-px bg-outline-variant mb-8"></div>
+<p class="font-poetry-hindi text-poetry-hindi text-on-surface-variant mb-10 line-clamp-2">
+                        कुछ बातें जो होंठों तक आकर रुक गईं,<br>
+                        आज इन कागज़ों पर उतर आई हैं।
+                    </p>
+<time class="font-metadata text-metadata text-on-surface-variant/70 mt-auto">Oct 12, 2023</time>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="poetry-card relative overflow-hidden group p-12 border border-surface-variant flex flex-col items-center text-center cursor-pointer hover:-translate-y-1 transition-transform duration-300 mt-8 lg:mt-16">
+<div class="absolute inset-0 z-0">
+<img alt="Open road" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAC9CUKe9QapCFGklWr03-mQBLLd1_Lv2XbXRL0-_v0BkyZxW9VpsFRthRMDBVJDV8dTkj3vp8_Mwgrrj66YTiTrfYG7DwrED_Cf_fSx7PS3xzGbI6u1Mt6qnI0R81lfwIJ8ozwwAB6a4JCuF3xdqe2sP8d4VJYJzqvddzqEh3hH1gUO-01SLVuoSy1oRID9JfWifpeqnP7AhSbr6EWl6MfX5o8r84aph7Qh5Ml6XQY7uOL10R2Y0IO">
+<div class="absolute inset-0 bg-surface-container-lowest/85 group-hover:bg-surface-container-lowest/75 transition-colors duration-500"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-black/10 to-surface-container-lowest/90"></div>
+</div>
+<div class="relative z-10 flex flex-col items-center h-full w-full">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-6">Life</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-6">सफर की शाम</h3>
+<div class="w-12 h-px bg-outline-variant mb-8"></div>
+<p class="font-poetry-hindi text-poetry-hindi text-on-surface-variant mb-10 line-clamp-2">
+                        रास्ते भी हैरान थे मेरी मंज़िल देखकर,<br>
+                        मैं मुसाफिर था जो घर को तलाशता रहा।
+                    </p>
+<time class="font-metadata text-metadata text-on-surface-variant/70 mt-auto">Sep 04, 2023</time>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="poetry-card relative overflow-hidden group p-12 border border-surface-variant flex flex-col items-center text-center cursor-pointer hover:-translate-y-1 transition-transform duration-300">
+<div class="absolute inset-0 z-0">
+<img alt="Dried flower" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8HgrIczFtZC6f2zlr3d5q47v5RCtmvL9OYARTV1NT1sOwZh6nmFzlhH1b-ZUw3SfBr8ozyXPfa7Re7lwfr6D9lltGnRpyobcNR9dtNPosinKpqe_SpoddXvwcvVAq7oovEB4RpFddOpogBmC6XR0bZxI-kt8dZU5Vk0i_wCZrpOS2f_4pMHSVOeTIzSSDFCEaESbGqlYS5I59hN0p-2AMR4DZSMiRTpRhDQmmheCPzVw9cmm8ycKj">
+<div class="absolute inset-0 bg-surface-container-lowest/85 group-hover:bg-surface-container-lowest/75 transition-colors duration-500"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-black/10 to-surface-container-lowest/90"></div>
+</div>
+<div class="relative z-10 flex flex-col items-center h-full w-full">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-6">Memories</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-6">धुंधली यादें</h3>
+<div class="w-12 h-px bg-outline-variant mb-8"></div>
+<p class="font-poetry-hindi text-poetry-hindi text-on-surface-variant mb-10 line-clamp-2">
+                        किताब के पन्नों में जो फूल रखा था कभी,<br>
+                        आज भी उसकी महक में वो बात बाकी है।
+                    </p>
+<time class="font-metadata text-metadata text-on-surface-variant/70 mt-auto">Aug 21, 2023</time>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="poetry-card relative overflow-hidden group p-12 border border-surface-variant flex flex-col items-center text-center cursor-pointer hover:-translate-y-1 transition-transform duration-300 mt-0 lg:mt-16">
+<div class="absolute inset-0 z-0">
+<img alt="Morning light" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9pZJfnd928Hy58AJ43uNIt_KrgAhfZy6tNJNSfLr0ug0yXFioIeeJI1tPd0OUbH773Jq8_KITwzZJ4ifUnElZaO2H22oZiDKYQh1ePo5gwL9rEZMyiJbavbE3G7jbSuD35g7taD6y8GmVsQiRPWTYHCwXqLk91TRoT4SEUlCQoIWVaAS2deAhp-8IvOh-_TJnfp4hdQFdW6bg0wM0oX8P2hahLrridtUIYpdhcc2VoLUfzgNyzl6Q">
+<div class="absolute inset-0 bg-surface-container-lowest/85 group-hover:bg-surface-container-lowest/75 transition-colors duration-500"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-black/10 to-surface-container-lowest/90"></div>
+</div>
+<div class="relative z-10 flex flex-col items-center h-full w-full">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-6">Hope</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-6">नई सुबह</h3>
+<div class="w-12 h-px bg-outline-variant mb-8"></div>
+<p class="font-poetry-hindi text-poetry-hindi text-on-surface-variant mb-10 line-clamp-2">
+                        अंधेरा घना है तो क्या हुआ,<br>
+                        चिरागों को जलने की इज़ाज़त भी तो है।
+                    </p>
+<time class="font-metadata text-metadata text-on-surface-variant/70 mt-auto">Jul 15, 2023</time>
+</div>
+</article>
+<!-- Card 5 -->
+<article class="poetry-card relative overflow-hidden group p-12 border border-surface-variant flex flex-col items-center text-center cursor-pointer hover:-translate-y-1 transition-transform duration-300 mt-8 lg:mt-32">
+<div class="absolute inset-0 z-0">
+<img alt="Rainy window" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrbHrxaxZZvENSm4uf4-UkgadJllsKhq4-XAwNiYiMj94o0icwv9Ns1iKTf8_mSFSNdtUzWaKRFelURK4BWMJguDz6XTf4SGYZebCu7JAHK_eNcOKIr4_0B4FJn0tRmdLBcHk5W7PD2MjDye6EnlDLTIg2qIGRPexfeqhK6yf0pFgtoAUzfphUlfdllNS3vdZdfOffBJX4gs6wwmckk4yTqbfXuo5GrL50gQMwJ6SvwSgWbDEShzYs">
+<div class="absolute inset-0 bg-surface-container-lowest/85 group-hover:bg-surface-container-lowest/75 transition-colors duration-500"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-black/10 to-surface-container-lowest/90"></div>
+</div>
+<div class="relative z-10 flex flex-col items-center h-full w-full">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-6">Unspoken</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-6">अधूरी बात</h3>
+<div class="w-12 h-px bg-outline-variant mb-8"></div>
+<p class="font-poetry-hindi text-poetry-hindi text-on-surface-variant mb-10 line-clamp-2">
+                        जो कह दिया वो तो सबने सुना,<br>
+                        जो न कह सके वो बस तुमने समझा।
+                    </p>
+<time class="font-metadata text-metadata text-on-surface-variant/70 mt-auto">Jun 02, 2023</time>
+</div>
+</article>
+<!-- Card 6 -->
+<article class="poetry-card relative overflow-hidden group p-12 border border-surface-variant flex flex-col items-center text-center cursor-pointer hover:-translate-y-1 transition-transform duration-300 mt-0 lg:mt-16">
+<div class="absolute inset-0 z-0">
+<img alt="Rainy window / muted sunset" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrbHrxaxZZvENSm4uf4-UkgadJllsKhq4-XAwNiYiMj94o0icwv9Ns1iKTf8_mSFSNdtUzWaKRFelURK4BWMJguDz6XTf4SGYZebCu7JAHK_eNcOKIr4_0B4FJn0tRmdLBcHk5W7PD2MjDye6EnlDLTIg2qIGRPexfeqhK6yf0pFgtoAUzfphUlfdllNS3vdZdfOffBJX4gs6wwmckk4yTqbfXuo5GrL50gQMwJ6SvwSgWbDEShzYs">
+<div class="absolute inset-0 bg-surface-container-lowest/85 group-hover:bg-surface-container-lowest/75 transition-colors duration-500"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-black/10 to-surface-container-lowest/90"></div>
+</div>
+<div class="relative z-10 flex flex-col items-center h-full w-full">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-6">Sad</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-6">तन्हाई</h3>
+<div class="w-12 h-px bg-outline-variant mb-8"></div>
+<p class="font-poetry-hindi text-poetry-hindi text-on-surface-variant mb-10 line-clamp-2">
+                        भीड़ बहुत थी आज शहर में मग़र,<br>
+                        हम अपने साये से भी अकेले मिले।
+                    </p>
+<time class="font-metadata text-metadata text-on-surface-variant/70 mt-auto">May 19, 2023</time>
+</div>
+</article>
+</section>
+<div class="mt-24 flex justify-center">
+<button class="px-8 py-3 bg-secondary-container border border-primary text-on-secondary-container font-nav-link text-nav-link hover:bg-primary hover:text-on-primary transition-colors flex items-center gap-2 group shadow-sm rounded-full">
+                    Load More 
+                    <span class="material-symbols-outlined text-sm group-hover:translate-y-1 transition-transform" data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap bg-surface-container border-t border-outline-variant">
+<div class="max-w-container-max mx-auto px-margin-mobile flex flex-col md:flex-row justify-between items-center gap-element-gap">
+<p class="font-metadata text-metadata text-on-surface-variant opacity-80 hover:opacity-100 transition-opacity"><div class="flex flex-col items-center md:items-start gap-2"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXvfD1QoD51OXdVLuhobklN1oYJnST8NxjpLSShOhdd1bPAOt0xwDcTIcbWFEP4WQXz0K3FaY0HoSbhD_Rbuj6KRGorsxxCZqjnKfTK8fmoOSNWx3OJBoFfjqS7_dzcl9Yhgy6FbzqsLaK6aVNB181TIvXfjhwLHWZIVoC1Z6nKUaA5DRKIW3J7lFUYQJenmeh4xH7XOVJV5DQGb3MxwbSJroC3HRno-8j5_7KsVm8UcP6QnUS6xtOqeSFyUFnf3Q8CA" alt="कलम और एहसास" class="h-8 w-auto object-contain opacity-80"><span class="">© 2024 शब्दांश • आपकी रूह तक पहुँचने की कोशिश</span></div></p>
+<nav class="flex gap-8">
+<a class="font-metadata text-metadata text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">निजता नीति</a>
+<a class="font-metadata text-metadata text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">नियम और शर्तें</a>
+<a class="font-metadata text-metadata text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">संपर्क करें</a>
+</nav>
+</div>
+</footer>
+
+
+</body></html>
+
+<!-- Shayari Reading View (Visuals) -->
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Shayari Reading Experience</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;family=Caveat:wght@400..700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "on-primary": "#ffffff",
+                "on-secondary": "#ffffff",
+                "inverse-on-surface": "#f3f0ea",
+                "surface-container": "#f1edeb",
+                "on-tertiary-container": "#a17f3b",
+                "primary-container": "#1c1b1a",
+                "on-surface-variant": "#504441",
+                "secondary-fixed-dim": "#e1c3bc",
+                "on-surface": "#221a18",
+                "antique-gold": "#C5A059",
+                "on-primary-fixed-variant": "#484645",
+                "on-secondary-container": "#765851",
+                "on-error-container": "#93000a",
+                "inverse-primary": "#ffb4a0",
+                "secondary-container": "#ffdad2",
+                "on-primary-container": "#868382",
+                "tertiary-fixed-dim": "#e2c28c",
+                "tertiary-container": "#261900",
+                "background": "#fdf9f4",
+                "surface-border": "#f1edeb",
+                "primary": "#8e4a38",
+                "surface-container-high": "#ebe7e5",
+                "surface-tint": "#8e4a38",
+                "primary-fixed": "#ffdad2",
+                "surface-container-lowest": "#ffffff",
+                "on-tertiary": "#ffffff",
+                "surface-container-low": "#f7f3ee",
+                "surface": "#fdf9f4",
+                "error-container": "#ffdad6",
+                "primary-fixed-dim": "#ffb4a0",
+                "on-secondary-fixed-variant": "#5d4039",
+                "secondary-fixed": "#ffdad2",
+                "surface-bright": "#fdf9f4",
+                "secondary": "#765851",
+                "on-secondary-fixed": "#2c1510",
+                "surface-container-highest": "#e5e1df",
+                "outline-variant": "#d4c3bf",
+                "surface-dim": "#ddd9d5",
+                "on-primary-fixed": "#3a0a00",
+                "inverse-surface": "#372e2c",
+                "outline": "#837470",
+                "on-error": "#ffffff",
+                "tertiary": "#6e5d2e",
+                "on-tertiary-fixed": "#241a00",
+                "tertiary-fixed": "#ffdf9d",
+                "surface-variant": "#f1dfdb",
+                "error": "#ba1a1a",
+                "on-background": "#221a18",
+                "ink-deep": "#221a18",
+                "on-tertiary-fixed-variant": "#544519",
+                "dusty-rose": "#bd8e82"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "container-max": "1140px",
+                "margin-mobile": "24px",
+                "stanza-gap": "48px",
+                "section-gap": "128px",
+                "element-gap": "16px",
+                "gutter": "32px"
+        },
+        "fontFamily": {
+                "label-sm": [
+                        "Hanken Grotesk"
+                ],
+                "poetry-body": [
+                        "\"Source Serif 4\""
+                ],
+                "headline-md": [
+                        "Playfair Display"
+                ],
+                "poetry-hindi": [
+                        "\"Source Serif 4\""
+                ],
+                "display-lg-mobile": [
+                        "Playfair Display"
+                ],
+                "metadata": [
+                        "Hanken Grotesk"
+                ],
+                "display-lg": [
+                        "Playfair Display"
+                ],
+                "nav-link": [
+                        "Hanken Grotesk"
+                ],
+                "signature": ["Caveat", "cursive"]
+        },
+        "fontSize": {
+                "label-sm": [
+                        "11px",
+                        {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.1em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "poetry-body": [
+                        "20px",
+                        {
+                                "lineHeight": "36px",
+                                "letterSpacing": "0.01em",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-md": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "poetry-hindi": [
+                        "22px",
+                        {
+                                "lineHeight": "38px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "display-lg-mobile": [
+                        "40px",
+                        {
+                                "lineHeight": "48px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "metadata": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "display-lg": [
+                        "64px",
+                        {
+                                "lineHeight": "72px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "400"
+                        }
+                ],
+                "nav-link": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "letterSpacing": "0.08em",
+                                "fontWeight": "500"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        body {
+            background-color: #fdf9f4;
+            color: #221a18;
+        }
+        /* Paper Grain Overlay */
+        .paper-grain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 100;
+            opacity: 0.04;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+        /* Soft Atmospheric Depth */
+        .atmospheric-blur {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80vw;
+            height: 80vh;
+            background: radial-gradient(circle, rgba(189, 142, 130, 0.08) 0%, rgba(253, 249, 244, 0) 70%);
+            pointer-events: none;
+            z-index: -1;
+            filter: blur(60px);
+        }
+        /* Immersive Background Animations */
+        @keyframes fadeInImg {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes kenBurnsZoom {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.08); }
+        }
+        .immersive-bg-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -3;
+            overflow: hidden;
+            opacity: 0;
+            animation: fadeInImg 2.5s ease-out forwards;
+        }
+        .immersive-bg-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            animation: kenBurnsZoom 30s ease-in-out infinite alternate;
+        }
+        .immersive-bg-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -2;
+            background-color: #fdf9f4;
+            opacity: 0.88;
+            pointer-events: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col relative overflow-x-hidden">
+<!-- Immersive Background -->
+<div class="immersive-bg-wrapper">
+<img alt="Rainy window memory" class="immersive-bg-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrbHrxaxZZvENSm4uf4-UkgadJllsKhq4-XAwNiYiMj94o0icwv9Ns1iKTf8_mSFSNdtUzWaKRFelURK4BWMJguDz6XTf4SGYZebCu7JAHK_eNcOKIr4_0B4FJn0tRmdLBcHk5W7PD2MjDye6EnlDLTIg2qIGRPexfeqhK6yf0pFgtoAUzfphUlfdllNS3vdZdfOffBJX4gs6wwmckk4yTqbfXuo5GrL50gQMwJ6SvwSgWbDEShzYs">
+</div>
+<div class="immersive-bg-overlay"></div>
+<!-- Ambient Background Elements -->
+<div class="paper-grain"></div>
+<div class="atmospheric-blur"></div>
+<!-- Navigation (Transactional/Focused view, so no global nav, just a back button) -->
+<header class="w-full max-w-container-max mx-auto px-margin-mobile md:px-gutter py-8 relative z-10">
+<a class="inline-flex items-center gap-2 text-dusty-rose hover:text-primary transition-colors duration-300 group" href="#">
+<span class="material-symbols-outlined text-sm transition-transform group-hover:-translate-x-1" style="font-variation-settings: 'wght' 300;">arrow_left_alt</span>
+<span class="font-nav-link text-nav-link uppercase">Back to Collection</span>
+</a>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex flex-col items-center justify-center px-margin-mobile md:px-gutter py-section-gap relative z-10">
+<!-- Poetry Container (Bespoke Book Page Feel) -->
+<article class="w-full max-w-3xl relative">
+<!-- Metadata & Title -->
+<header class="text-center mb-element-gap flex flex-col items-center">
+<div class="flex items-center gap-3 mb-6">
+<span class="font-metadata text-metadata text-secondary tracking-widest uppercase">Love &amp; Longing</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-metadata text-metadata text-secondary tracking-widest uppercase">October 2023</span>
+</div>
+<h1 class="font-headline-md text-headline-md md:font-display-lg md:text-display-lg text-ink-deep mb-8 max-w-2xl">
+                    ख़ामोशी की आवाज़
+                </h1>
+<!-- Ultra-thin gold divider -->
+<div class="w-16 h-px bg-dusty-rose/50"></div>
+</header>
+<!-- The Poetry Canvas -->
+<div class="relative py-12 px-4 sm:px-12 md:px-24 bg-surface-container/30 backdrop-blur-sm border border-outline-variant/10 rounded-DEFAULT shadow-sm transition-all duration-500 hover:bg-surface-container/50 group">
+<!-- Subtle hover guide line -->
+<div class="absolute left-0 top-1/2 -translate-y-1/2 w-0.5 h-0 bg-dusty-rose/50 transition-all duration-700 ease-out group-hover:h-3/4 opacity-0 group-hover:opacity-100 rounded-r-full"></div>
+<div class="text-center space-y-element-gap">
+<p class="font-poetry-hindi text-poetry-hindi text-ink-deep">
+                        तेरे बिन ये शामें उदास रहती हैं,<br>
+                        जैसे चाँदनी रात में चाँद की तलाश रहती है।
+                    </p>
+<p class="font-poetry-hindi text-poetry-hindi text-ink-deep">
+                        इन लकीरों में तेरा नाम ढूँढता हूँ,<br>
+                        हर धड़कन में तेरी ही आस रहती है।
+                    </p>
+<p class="font-poetry-hindi text-poetry-hindi text-ink-deep">
+                        तू पास नहीं फिर भी एहसास है तेरा,<br>
+                        साँसों में मेरी तेरी ही महक पास रहती है।
+                    </p>
+</div>
+<!-- Author Signature -->
+<div class="mt-16 text-right w-full">
+<span class="font-signature text-3xl text-antique-gold italic pr-8">
+                        - अनाम
+                    </span>
+</div>
+</div>
+<!-- Interaction Bar -->
+<div class="flex justify-center items-center gap-8 mt-12 mb-section-gap">
+<button aria-label="Copy Shayari" class="group flex flex-col items-center gap-2">
+<div class="w-12 h-12 rounded-full border border-dusty-rose/50 flex items-center justify-center text-dusty-rose group-hover:bg-dusty-rose/10 group-hover:border-dusty-rose transition-all duration-300">
+<span class="material-symbols-outlined" style="font-variation-settings: 'wght' 300;">content_copy</span>
+</div>
+<span class="font-metadata text-metadata text-dusty-rose group-hover:text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300">Copy</span>
+</button>
+<button aria-label="Share Shayari" class="group flex flex-col items-center gap-2">
+<div class="w-12 h-12 rounded-full border border-dusty-rose/50 flex items-center justify-center text-dusty-rose group-hover:bg-dusty-rose/10 group-hover:border-dusty-rose transition-all duration-300">
+<span class="material-symbols-outlined" style="font-variation-settings: 'wght' 300;">share</span>
+</div>
+<span class="font-metadata text-metadata text-dusty-rose group-hover:text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300">Share</span>
+</button>
+</div>
+<!-- About this shayari -->
+<section class="max-w-xl mx-auto text-center border border-outline-variant/20 bg-surface-container-low/50 rounded-lg p-8 shadow-sm">
+<h3 class="font-nav-link text-nav-link text-secondary uppercase tracking-widest mb-4">About this piece</h3>
+<p class="font-poetry-body text-poetry-body text-on-surface-variant italic leading-relaxed">
+                    Written in the quiet hours before dawn, this piece explores the lingering presence of a memory. It speaks to the phenomenon where absence itself becomes a tangible feeling, occupying the space someone left behind.
+                </p>
+</section>
+</article>
+</main>
+<!-- Minimal Footer (From JSON, adapted for focused view) -->
+<footer class="w-full bg-surface-container-lowest py-8 mt-auto border-t border-outline-variant/10 relative z-10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter flex flex-col md:flex-row justify-between items-center gap-element-gap">
+<div class="flex items-center gap-2"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfKBpV9XJmtfoND2Jq32KgY5JKQlncErpKDsdq2gJQE5mPmkPKAB12Ds55lydLr0mt08XQ22f9rQy0vTLIl0SCNujWytDj87gkDPNBRi0uzpcQqyqM3TKmw0oTJbkbwLhLb2xs4Tmyfc4Utfht81MAjxxIMxu8If0LuUSGoKMsV1IZ_rtgR4DWZWj3OymqJzr5S_hakbI1tg6s9VZKskRQo7n-idVTAE-gQf8WEShERMl3EQZAH_JCWC_EO7Lj8esabw" alt="Lafz Logo" class="h-12 w-auto"><span class="font-metadata text-metadata text-secondary opacity-80">© 2024 शब्दांश</span></div>
+<div class="flex gap-6">
+<a class="font-metadata text-metadata text-secondary hover:text-ink-deep transition-colors" href="#">निजता नीति</a>
+<a class="font-metadata text-metadata text-secondary hover:text-ink-deep transition-colors" href="#">नियम और शर्तें</a>
+<a class="font-metadata text-metadata text-secondary hover:text-ink-deep transition-colors" href="#">संपर्क करें</a>
+</div>
+</div>
+</footer>
+
+
+</body></html>
